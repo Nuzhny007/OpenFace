@@ -1,8 +1,6 @@
 % This is sort of the unit test for the whole module (needs datasets)
-% Will take over an hour to run all
-
-% TODO need some unit testy things, some asserts
-
+% Will take several hours to run all
+clear
 tic
 %% Head pose
 cd('Head Pose Experiments');
@@ -14,7 +12,7 @@ cd('../');
 
 %% Features
 cd('Feature Point Experiments');
-run_clm_feature_point_tests_wild;
+run_OpenFace_feature_point_tests_300W;
 assert(median(err_clnf) < 0.041);
 assert(median(err_clnf_wild) < 0.041);
 run_yt_dataset;
